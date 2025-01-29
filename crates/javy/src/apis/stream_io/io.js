@@ -1,6 +1,11 @@
 (function () {
   const __javy_io_readSync = globalThis.__javy_io_readSync;
   const __javy_io_writeSync = globalThis.__javy_io_writeSync;
+  const __javy_io_test = globalThis.__javy_io_test;
+  const __javy_io_bindTcpStream = globalThis.__javy_io_bindTcpStream;
+  const __javy_io_readTcpStream = globalThis.__javy_io_readTcpStream;
+  const __javy_io_writeTcpStream = globalThis.__javy_io_writeTcpStream;
+
   globalThis.Javy.IO = {
     readSync(fd, data) {
       if (!(data instanceof Uint8Array)) {
