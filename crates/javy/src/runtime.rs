@@ -8,6 +8,7 @@ use crate::{
     Config,
 };
 
+use crate::apis::net;
 use anyhow::{bail, Result};
 use rquickjs::{
     context::{intrinsic, Intrinsic},
@@ -148,6 +149,8 @@ impl Runtime {
                 stream_io::register(ctx.clone())
                     .expect("registering StreamIO functions to succeed");
             }
+
+            net::register(ctx.clone()).expect("registering net functions to succeed");
         });
 
         Ok(ManuallyDrop::new(context))

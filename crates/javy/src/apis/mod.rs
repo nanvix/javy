@@ -57,6 +57,7 @@
 pub(crate) mod console;
 #[cfg(feature = "json")]
 pub(crate) mod json;
+pub(crate) mod net;
 pub(crate) mod random;
 pub(crate) mod stream_io;
 pub(crate) mod text_encoding;
